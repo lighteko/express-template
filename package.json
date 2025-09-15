@@ -6,6 +6,8 @@
   "author": "lighteko <dev.lighteko@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
@@ -19,7 +21,8 @@
     "tsc-alias": "^1.8.16",
     "uuid": "^11.1.0",
     "winston": "^3.17.0",
-    "ws": "^8.18.3"
+    "ws": "^8.18.3",
+    "zod": "^4.1.8"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
