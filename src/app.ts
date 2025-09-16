@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import initLogger from "@src/logger";
 import DB from "@lib/infra/postgres";
+// import defaultRoutes from "@src/default/routes";
 
 
 function createApp() {
@@ -60,6 +61,7 @@ function createApp() {
   });
 
   // Public routes
+  // app.use("/default", defaultRoutes());
 
   // Protected routes
 

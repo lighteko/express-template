@@ -5,17 +5,18 @@ import { InternalServerError } from "@lib/errors";
 export function validateInput<T extends z.ZodTypeAny>(
   schema: z.ZodTypeAny,
   data: unknown
-): T {
+): unknown {
   const parseResult = schema.safeParse(data);
   if (!parseResult.success) {
     const errorTree = z.treeifyError(parseResult.error);
     const errors = errorTree.errors;
+    console.log(errors);
     if (errors.length > 0) {
       const errString = errors.join(", ");
       throw new ValidationError(errString);
     }
   }
-  return parseResult.data as T;
+  return parseResult.data as unknown;
 }
 
 export function validateOutput<T extends z.ZodTypeAny>(
